@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Главная</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pangolin&family=Rubik+Burned&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="wrapper">
+    <img src="https://i.pinimg.com/originals/20/32/d6/2032d67dd19a43a6dd6b491822871dea.gif" alt="Анимация" class="center-gif">
+    <p class="prompt-text">Предупреждение: данная страница не является достоверной информацией о марвел вселенной и это просто фан-проект</p>
+    <div class="button-container">
+        <button class="choice-button" onclick="redirectTo('suzuma.html')">Нажмите, чтобы продолжить просмотр</button>
+    </div>
+</div>
+<script>
+    function redirectTo(url) {
+        window.location.href = url;
+    }
+</script>
+
+<script>
+    // Добавление плавного исчезновения при переходе
+    document.querySelectorAll('.choice-button').forEach(button => {
+        button.addEventListener('click', function (event) {
+            event.preventDefault(); // Остановить стандартное поведение
+            const targetUrl = this.getAttribute('href'); // Получить URL
+            document.body.classList.add('fade-out'); // Добавить класс анимации
+            setTimeout(() => {
+                window.location.href = targetUrl; // Перейти на новую страницу
+            }, 500); // Задержка в миллисекундах (должна совпадать с CSS-анимацией)
+        });
+    });
+</script>
+
+</body>
+</html>
