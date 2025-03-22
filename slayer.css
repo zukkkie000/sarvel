@@ -17,11 +17,11 @@ body.fade-out {
 
 
 header {
-    background-color: #6b060e; /* Темно-синий цвет */
+    background-color: #000000; /* Темно-синий цвет */
     font-family: "Rubik Burned", system-ui;
     background-position: bottom;
     background-repeat: repeat;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     text-align: center;
     padding: 1em 0;
 }
@@ -86,7 +86,7 @@ h1 {
 .character-image {
     width: 100%;
     margin-bottom: 1em;
-    border: 2px solid #e63946;
+    border: 2px solid #ffffff;
     border-radius: 10px;
 }
 
@@ -134,7 +134,7 @@ h1 {
     padding: 20px;
     background: rgba(0, 0, 0, 0.95); /* Тёмный фон с небольшой прозрачностью */
     border-radius: 8px;
-    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5); /* Лёгкое свечение */
+    box-shadow: 0 0 15px rgba(255, 251, 251, 0.5); /* Лёгкое свечение */
 }
 
 .text-container {
