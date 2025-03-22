@@ -1,13 +1,14 @@
 
 
 body {
-    font-family: "Pangolin", cursive; /* Японский шрифт */
-    background-color: #000000; /* Тёмный фон */
-    color: #f5f5f5; /* Светлый текст для контраста */
+    background-color: #000000;
+    color: white;
     margin: 0;
     padding: 0;
-    opacity: 1;
-    transition: opacity 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;  /* Страница будет как минимум высотой в 100% от окна */
+    background-image: url('https://i.pinimg.com/originals/21/f3/5e/21f35e59c8f287e9e1460e69702ccadb.gif');
 }
 
 body.fade-out {
@@ -127,10 +128,44 @@ h1 {
 }
 
 .infoblok {
-    background: rgba(0, 0, 0, 0.8);
+    width: 100%; /* Растягивает инфоблок на всю доступную ширину */
+    max-width: 1000px; /* Опционально: ограничивает слишком большую ширину */
+    margin: auto; /* Центрирует блок */
     padding: 20px;
-    border: 2px solid #90050a;
+    background: rgba(0, 0, 0, 0.95); /* Тёмный фон с небольшой прозрачностью */
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5); /* Лёгкое свечение */
+}
+
+.text-container {
+    font-family: "Pangolin", cursive;
+    background-color: #000000;
+    color: white;
+    padding: 20px;
+/* Добавляем отступ сверху, чтобы текст не перекрывался шапкой */
     border-radius: 10px;
-    box-shadow: 0 0 10px #90050a;
-    margin: 20px;
+    width: 60%;  /* Ширина контейнера */
+    margin: 20px auto;  /* Центрируем по горизонтали с отступом сверху и снизу */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    flex-grow: 1;  /* Растягивает контейнер по высоте */
+}
+
+.image-row {
+    display: flex;
+    gap: 10px; /* Можно изменить расстояние */
+    justify-content: center; /* Центрирование */
+    flex-wrap: wrap; /* Чтобы не выходило за границы экрана */
+}
+
+.character-image {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .text-container, .infoblok {
+        width: 100%;
+        padding: 10px; /* Небольшие отступы, чтобы текст не прилипал к краям */
+    }
 }
