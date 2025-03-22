@@ -125,3 +125,12 @@ h1 {
     display: block; /* Убираем лишние отступы */
     margin: 0 auto; /* Центрируем */
 }
+
+.infoblok {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border: 2px solid #90050a;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #90050a;
+    margin: 20px;
+}
