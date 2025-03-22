@@ -8,7 +8,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;  /* Страница будет как минимум высотой в 100% от окна */
-    background-image: url('https://i.pinimg.com/originals/21/f3/5e/21f35e59c8f287e9e1460e69702ccadb.gif');
+    background-image: url('https://i.pinimg.com/originals/c5/44/3a/c5443ad99d1836fc1dfb5d493aa57201.gif');
 }
 
 body.fade-out {
